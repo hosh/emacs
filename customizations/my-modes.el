@@ -2,6 +2,11 @@
 (require 'textmate)
 (textmate-mode t)
 
+; Linum Mode
+;; (require 'linum)
+;; (global-linum-mode 1)
+;; (setq linum-format "  %d ")
+
 ; Git
 (require 'magit)
 (autoload 'magit-status "magit" nil t)

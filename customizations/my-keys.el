@@ -49,3 +49,23 @@
 
 ; magit
 (global-set-key (kbd "C-c i") 'magit-status)
+
+;; This below is from my previous bindigs file
+
+;; Jump to a definition in the current file. (This is awesome.)
+(global-set-key (kbd "C-x C-i") 'ido-imenu)
+
+;; File finding
+(global-set-key (kbd "C-x M-f") 'ido-find-file-other-window)
+(global-set-key (kbd "C-x C-M-f") 'find-file-in-project)
+(global-set-key (kbd "C-x f") 'ido-find-file)
+(global-set-key (kbd "C-c y") 'bury-buffer)
+(global-set-key (kbd "C-c r") 'revert-buffer)
+(global-set-key (kbd "M-`") 'file-cache-minibuffer-complete)
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+
+;; If you want to be able to M-x without meta
+(global-set-key (kbd "C-x C-m") 'execute-extended-command)
+
+;; Duplicate line
+(global-set-key (kbd "M-d") 'defunkt-duplicate-line)
