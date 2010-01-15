@@ -22,6 +22,9 @@
 ; Nav
 (require 'nav)
 
+; Cheat
+(require 'cheat)
+
 ; Scala
 (require 'scala-mode-auto)
 
