@@ -25,6 +25,11 @@
 ; Cheat
 (require 'cheat)
 
+;; RHTML
+(require 'rhtml-mode)
+(add-hook 'rhtml-mode-hook
+     	  (lambda () (rinari-launch)))
+
 ; Scala
 (require 'scala-mode-auto)
 
@@ -54,21 +59,21 @@
 (setq rinari-tags-file-name "TAGS")
 
 ; nxhtml (HTML/ERB template support)
-(load "~/.emacs.d/vendor/nxhtml/autostart.el")
-(setq
-  nxhtml-global-minor-mode t
-  mumamo-chunk-coloring 'submode-colored
-  nxhtml-skip-welcome t
-  indent-region-mode t
-  rng-nxml-auto-validate-flag nil
-  nxml-degraded t)
-(add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo))
-(eval-after-load 'nxhtml
-  '(eval-after-load 'color-theme
-     (custom-set-faces
-       '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)) (:background "#242424"))))
-       '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background dark)) (:background "#373736"))))
-)))
+;; (load "~/.emacs.d/vendor/nxhtml/autostart.el")
+;; (setq
+;;   nxhtml-global-minor-mode t
+;;   mumamo-chunk-coloring 'submode-colored
+;;   nxhtml-skip-welcome t
+;;   indent-region-mode t
+;;   rng-nxml-auto-validate-flag nil
+;;   nxml-degraded t)
+;; (add-to-list 'auto-mode-alist '("\\.html\\.erb\\'" . eruby-nxhtml-mumamo))
+;; (eval-after-load 'nxhtml
+;;   '(eval-after-load 'color-theme
+;;      (custom-set-faces
+;;        '(mumamo-background-chunk-major ((((class color) (min-colors 88) (background dark)) (:background "#242424"))))
+;;        '(mumamo-background-chunk-submode1 ((((class color) (min-colors 88) (background dark)) (:background "#373736"))))
+;; )))
 
 ; swank-clojure
 (setq swank-clojure-jar-path "~/src/third_party/clojure/clojure/clojure-1.1.0-master-SNAPSHOT.jar")
