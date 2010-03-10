@@ -43,6 +43,7 @@
 (add-to-list 'load-path "~/.emacs.d/vendor/js2")
 (add-to-list 'load-path "~/.emacs.d/vendor/swank-clojure/src/emacs")
 (add-to-list 'load-path "~/.emacs.d/vendor/rhtml")
+(add-to-list 'load-path "~/.emacs.d/vendor/yasnippet")
 
 ; load personal customizations (keybindings, colors, etc.)
 (mapcar 'load-directory '("~/.emacs.d/customizations"))

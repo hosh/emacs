@@ -58,6 +58,12 @@
 (require 'rinari)
 (setq rinari-tags-file-name "TAGS")
 
+; YASnippets
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
+
+
 ; nxhtml (HTML/ERB template support)
 ;; (load "~/.emacs.d/vendor/nxhtml/autostart.el")
 ;; (setq
