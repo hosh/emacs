@@ -31,7 +31,6 @@
 (vendor 'save-visited-files)
 (vendor 'dired+)
 (vendor 'minimap)
-(vendor 'clojure-mode)
 (vendor 'slime)
 (vendor 'thrift-mode)
 (vendor 'mo-git-blame)
@@ -41,7 +40,6 @@
 ; load third-party modes that the vendor function can't handle
 (add-to-list 'load-path "~/.emacs.d/vendor/scala")
 (add-to-list 'load-path "~/.emacs.d/vendor/js2")
-(add-to-list 'load-path "~/.emacs.d/vendor/swank-clojure/src/emacs")
 (add-to-list 'load-path "~/.emacs.d/vendor/rhtml")
 (add-to-list 'load-path "~/.emacs.d/vendor/yasnippet")
 
@@ -50,7 +48,7 @@
 
 ; per-host customizations
 (let ((hostname (chomp (shell-command-to-string "/bin/hostname"))))
-  (if (string-equal hostname "jaya.local")
+  (if (string-equal hostname "sd-mranallo-c5.989studios.com")
       (load-file "~/.emacs.d/office_tweaks.el")
     ))
 
@@ -61,7 +59,6 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(blink-cursor-mode t)
  '(column-number-mode t)
  '(org-agenda-files (quote ("~/Documents/org/events.org" "~/Documents/org/personal.org" "~/Documents/org/reading.org" "~/Documents/org/someday.org" "~/Documents/org/writing.org")))
  '(show-paren-mode t))
@@ -70,6 +67,7 @@
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "#141414" :foreground "#F8F8F8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 103 :width normal :foundry "unknown" :family "DejaVu LGC Sans Mono"))))
  '(diff-added ((t (:foreground "#559944"))))
  '(diff-context ((t nil)))
  '(diff-file-header ((((class color) (min-colors 88) (background dark)) (:foreground "RoyalBlue1"))))
