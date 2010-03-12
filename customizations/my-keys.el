@@ -68,4 +68,5 @@
 (global-set-key (kbd "C-x C-m") 'execute-extended-command)
 
 ;; Duplicate line
-(global-set-key (kbd "M-d") 'defunkt-duplicate-line)
+;; (global-set-key (kbd "M-d") 'defunkt-duplicate-line)
+(global-set-key (kbd "M-d") 'duplicate-current-line-or-region)
