@@ -52,22 +52,6 @@
       (load-file "~/.emacs.d/office_tweaks.el")
     ))
 
-; run server for emacsclient interactions
-;(server-start)
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(column-number-mode t)
- '(org-agenda-files (quote ("~/Documents/org/events.org" "~/Documents/org/personal.org" "~/Documents/org/reading.org" "~/Documents/org/someday.org" "~/Documents/org/writing.org")))
- '(show-paren-mode t))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "#141414" :foreground "#F8F8F8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 103 :width normal :foundry "unknown" :family "DejaVu LGC Sans Mono"))))
  '(diff-added ((t (:foreground "#559944"))))
  '(diff-context ((t nil)))
  '(diff-file-header ((((class color) (min-colors 88) (background dark)) (:foreground "RoyalBlue1"))))
@@ -78,4 +62,4 @@
  '(diff-refine-change ((((class color) (min-colors 88) (background dark)) (:background "#182042"))))
  '(diff-removed ((t (:foreground "#de1923"))))
  '(flymake-errline ((t :underline "red")))
- '(flymake-warnline ((t :underline "green"))))
+ '(flymake-warnline ((t :underline "green")))
