@@ -1,5 +1,5 @@
 ; font
-;(set-default-font "-apple-DejaVu_Sans_Mono-medium-normal-normal-*-14-*-*-*-m-0-iso10646-")
+(set-default-font "-apple-Courier_New-medium-normal-normal-*-14-*-*-*-m-0-iso10646-")
 ;(set-default-font "-apple-Monaco-medium-normal-normal-*-13-*-*-*-m-0-iso10646-")
 
 ; don't display startup message
