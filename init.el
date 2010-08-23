@@ -4,6 +4,9 @@
 ; some modes need to call stuff on the exec-path
 (push "/usr/local/bin" exec-path)
 
+; Start in server mode
+(server-start)
+
 ; add directories to the load path
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/customizations")

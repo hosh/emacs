@@ -100,3 +100,6 @@
 (require 'smart-tab)
 (global-smart-tab-mode 1)
 (setq smart-tab-using-hippie-expand nil)
+
+; dim-switch-window
+(require 'switch-window)
