@@ -4,6 +4,9 @@
 ; some modes need to call stuff on the exec-path
 (push "/usr/local/bin" exec-path)
 
+; Start in server mode
+(server-start)
+
 ; add directories to the load path
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/customizations")
@@ -31,7 +34,6 @@
 (vendor 'save-visited-files)
 (vendor 'dired+)
 (vendor 'minimap)
-(vendor 'clojure-mode)
 (vendor 'slime)
 (vendor 'thrift-mode)
 (vendor 'mo-git-blame)
@@ -41,34 +43,18 @@
 ; load third-party modes that the vendor function can't handle
 (add-to-list 'load-path "~/.emacs.d/vendor/scala")
 (add-to-list 'load-path "~/.emacs.d/vendor/js2")
-(add-to-list 'load-path "~/.emacs.d/vendor/swank-clojure/src/emacs")
 (add-to-list 'load-path "~/.emacs.d/vendor/rhtml")
+(add-to-list 'load-path "~/.emacs.d/vendor/yasnippet")
 
 ; load personal customizations (keybindings, colors, etc.)
 (mapcar 'load-directory '("~/.emacs.d/customizations"))
 
 ; per-host customizations
 (let ((hostname (chomp (shell-command-to-string "/bin/hostname"))))
-  (if (string-equal hostname "jaya.local")
+  (if (string-equal hostname "sd-mranallo-c5.989studios.com")
       (load-file "~/.emacs.d/office_tweaks.el")
     ))
 
-; run server for emacsclient interactions
-;(server-start)
-(custom-set-variables
-  ;; custom-set-variables was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- '(blink-cursor-mode t)
- '(column-number-mode t)
- '(org-agenda-files (quote ("~/Documents/org/events.org" "~/Documents/org/personal.org" "~/Documents/org/reading.org" "~/Documents/org/someday.org" "~/Documents/org/writing.org")))
- '(show-paren-mode t))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
  '(diff-added ((t (:foreground "#559944"))))
  '(diff-context ((t nil)))
  '(diff-file-header ((((class color) (min-colors 88) (background dark)) (:foreground "RoyalBlue1"))))
@@ -79,4 +65,15 @@
  '(diff-refine-change ((((class color) (min-colors 88) (background dark)) (:background "#182042"))))
  '(diff-removed ((t (:foreground "#de1923"))))
  '(flymake-errline ((t :underline "red")))
- '(flymake-warnline ((t :underline "green"))))
+ '(flymake-warnline ((t :underline "green")))
+
+
+;;; This was installed by package-install.el.
+;;; This provides support for the package system and
+;;; interfacing with ELPA, the package archive.
+;;; Move this code earlier if you want to reference
+;;; packages in your .emacs.
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))

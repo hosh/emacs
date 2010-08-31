@@ -58,6 +58,12 @@
 (require 'rinari)
 (setq rinari-tags-file-name "TAGS")
 
+; YASnippets
+(require 'yasnippet)
+(yas/initialize)
+(yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
+
+
 ; nxhtml (HTML/ERB template support)
 ;; (load "~/.emacs.d/vendor/nxhtml/autostart.el")
 ;; (setq
@@ -76,11 +82,11 @@
 ;; )))
 
 ; swank-clojure
-(setq swank-clojure-jar-path "~/src/third_party/clojure/clojure/clojure-1.1.0-master-SNAPSHOT.jar")
-(setq swank-clojure-extra-classpaths
-      (list "~/src/third_party/clojure/clojure-contrib/clojure-contrib.jar"))
-(require 'clojure-mode)
-(require 'swank-clojure-autoload)
+;; (setq swank-clojure-jar-path "~/src/third_party/clojure/clojure/clojure-1.1.0-master-SNAPSHOT.jar")
+;; (setq swank-clojure-extra-classpaths
+;;       (list "~/src/third_party/clojure/clojure-contrib/clojure-contrib.jar"))
+;; (require 'clojure-mode)
+;; (require 'swank-clojure-autoload)
 
 ; SLIME
 (require 'slime)
@@ -94,3 +100,6 @@
 (require 'smart-tab)
 (global-smart-tab-mode 1)
 (setq smart-tab-using-hippie-expand nil)
+
+; dim-switch-window
+(require 'switch-window)
