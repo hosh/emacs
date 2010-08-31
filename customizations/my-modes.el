@@ -88,11 +88,6 @@
 ;; (require 'clojure-mode)
 ;; (require 'swank-clojure-autoload)
 
-; SLIME
-(require 'slime)
-(eval-after-load "slime" (slime-setup '(slime-repl)))
-(slime-setup)
-
 ; thrift-mode
 (require 'thrift-mode)
 
