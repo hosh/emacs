@@ -1,11 +1,6 @@
 ; TextMate
-(require 'textmate)
+;;(require 'textmate)
 (textmate-mode t)
-
-; Linum Mode
-;; (require 'linum)
-;; (global-linum-mode 1)
-;; (setq linum-format "  %d ")
 
 ; Git
 (require 'magit)
@@ -20,25 +15,19 @@
 (autoload 'ack-find-file "full-ack" nil t)
 
 ; Nav
-(require 'nav)
-
-; Cheat
-(require 'cheat)
+;;(require 'nav)
 
 ;; RHTML
 (require 'rhtml-mode)
 (add-hook 'rhtml-mode-hook
      	  (lambda () (rinari-launch)))
 
-; Scala
-(require 'scala-mode-auto)
-
 ; Textile
-(require 'textile-minor-mode)
+;;(require 'textile-minor-mode)
 (add-to-list 'auto-mode-alist '("\\.textile\\'" . textile-minor-mode))
 
 ; YAML
-(require 'yaml-mode)
+;(require 'yaml-mode)
 (add-to-list 'auto-mode-alist '("\\.yml$" . yaml-mode))
 (add-to-list 'auto-mode-alist '("\\.yaml$" . yaml-mode))
 
@@ -88,13 +77,8 @@
 ;; (require 'clojure-mode)
 ;; (require 'swank-clojure-autoload)
 
-; thrift-mode
-(require 'thrift-mode)
-
 ; smart-tab
-(require 'smart-tab)
+;;(require 'smart-tab)
 (global-smart-tab-mode 1)
 (setq smart-tab-using-hippie-expand nil)
 
-; dim-switch-window
-(require 'switch-window)

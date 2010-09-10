@@ -35,13 +35,14 @@
 (vendor 'dired+)
 (vendor 'minimap)
 (vendor 'slime)
-(vendor 'thrift-mode)
 (vendor 'mo-git-blame)
 (vendor 'smart-tab)
 (vendor 'cheat)
+(vendor 'undo-tree)
+(vendor 'google-maps)
+
 
 ; load third-party modes that the vendor function can't handle
-(add-to-list 'load-path "~/.emacs.d/vendor/scala")
 (add-to-list 'load-path "~/.emacs.d/vendor/js2")
 (add-to-list 'load-path "~/.emacs.d/vendor/rhtml")
 (add-to-list 'load-path "~/.emacs.d/vendor/yasnippet")
