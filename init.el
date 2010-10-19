@@ -50,12 +50,6 @@
 ; load personal customizations (keybindings, colors, etc.)
 (mapcar 'load-directory '("~/.emacs.d/customizations"))
 
-; per-host customizations
-(let ((hostname (chomp (shell-command-to-string "/bin/hostname"))))
-  (if (string-equal hostname "sd-mranallo-c5.989studios.com")
-      (load-file "~/.emacs.d/office_tweaks.el")
-    ))
-
  '(diff-added ((t (:foreground "#559944"))))
  '(diff-context ((t nil)))
  '(diff-file-header ((((class color) (min-colors 88) (background dark)) (:foreground "RoyalBlue1"))))
