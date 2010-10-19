@@ -52,6 +52,12 @@
 (yas/initialize)
 (yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
 
+; Smex
+(global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "M-X") 'smex-major-mode-commands)
+
+; RVM
+(rvm-use-default) ;; use rvm’s default ruby for the current Emacs session
 
 ; nxhtml (HTML/ERB template support)
 ;; (load "~/.emacs.d/vendor/nxhtml/autostart.el")
