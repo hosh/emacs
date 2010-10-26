@@ -7,6 +7,16 @@
 ; Start in server mode
 (server-start)
 
+;;; This was installed by package-install.el.
+;;; This provides support for the package system and
+;;; interfacing with ELPA, the package archive.
+;;; Move this code earlier if you want to reference
+;;; packages in your .emacs.
+(when
+    (load
+     (expand-file-name "~/.emacs.d/elpa/package.el"))
+  (package-initialize))
+
 ; add directories to the load path
 (add-to-list 'load-path "~/.emacs.d")
 (add-to-list 'load-path "~/.emacs.d/customizations")
@@ -40,7 +50,9 @@
 (vendor 'cheat)
 (vendor 'undo-tree)
 (vendor 'google-maps)
-;(vendor 'rvm)
+(vendor 'enclose)
+(vendor 'feature-mode)
+
 
 ; load third-party modes that the vendor function can't handle
 (add-to-list 'load-path "~/.emacs.d/vendor/js2")
@@ -63,12 +75,3 @@
  '(flymake-warnline ((t :underline "green")))
 
 
-;;; This was installed by package-install.el.
-;;; This provides support for the package system and
-;;; interfacing with ELPA, the package archive.
-;;; Move this code earlier if you want to reference
-;;; packages in your .emacs.
-(when
-    (load
-     (expand-file-name "~/.emacs.d/elpa/package.el"))
-  (package-initialize))

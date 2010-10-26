@@ -53,11 +53,27 @@
 (yas/load-directory "~/.emacs.d/vendor/yasnippet/snippets")
 
 ; Smex
+(smex-initialize)
 (global-set-key (kbd "M-x") 'smex)
+(global-set-key (kbd "C-x m") 'smex)
+(global-set-key (kbd "C-x C-m") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
 
 ; RVM
 (rvm-use-default) ;; use rvm’s default ruby for the current Emacs session
+
+; smart-tab
+;;(require 'smart-tab)
+(global-smart-tab-mode 1)
+(setq smart-tab-using-hippie-expand nil)
+
+;; load feature-mode
+(require 'feature-mode)
+(add-to-list 'auto-mode-alist '("\.feature$" . feature-mode))
+
+; Enclose
+(require 'enclose)
+;(add-hook 'ruby-mode-hook 'enclose-mode)
 
 ; nxhtml (HTML/ERB template support)
 ;; (load "~/.emacs.d/vendor/nxhtml/autostart.el")
@@ -83,8 +99,4 @@
 ;; (require 'clojure-mode)
 ;; (require 'swank-clojure-autoload)
 
-; smart-tab
-;;(require 'smart-tab)
-(global-smart-tab-mode 1)
-(setq smart-tab-using-hippie-expand nil)
 
