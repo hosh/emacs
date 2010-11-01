@@ -1,1 +1,1 @@
-Mark's emacs configuration.
+Hosh's emacs configuration.
