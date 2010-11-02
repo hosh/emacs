@@ -47,9 +47,5 @@
 ; apply syntax highlighting to all buffers
 (global-font-lock-mode t)
 
-; smooth scrolling
-(require 'centered-cursor-mode)
-(global-centered-cursor-mode t)
-
-; Undo Trees!
-(global-undo-tree-mode)
+; Startup with nav
+(nav)

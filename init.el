@@ -5,7 +5,7 @@
 (push "/usr/local/bin" exec-path)
 
 ; Start in server mode
-(server-start)
+;(server-start)
 
 ;;; This was installed by package-install.el.
 ;;; This provides support for the package system and
@@ -26,52 +26,19 @@
 ; handy function to load all elisp files in a directory
 (load-file "~/.emacs.d/load-directory.el")
 
+; Load and setup viper
+(setq viper-mode t)
+(require 'viper)
+
 ; load utility functions
 (mapcar 'load-directory '("~/.emacs.d/utilities"))
 
 ; load third-party modes
 ; note: these are configured in customizations/my-modes.el
-(vendor 'color-theme)
-(vendor 'textmate)
 (vendor 'nav)
-(vendor 'centered-cursor-mode)
-(vendor 'browse-kill-ring)
-(vendor 'yaml-mode)
-(vendor 'rinari)
-(vendor 'full-ack)
-(vendor 'textile-minor-mode)
-(vendor 'magit)
-(vendor 'save-visited-files)
-(vendor 'dired+)
-(vendor 'minimap)
-(vendor 'slime)
-(vendor 'mo-git-blame)
-(vendor 'smart-tab)
-(vendor 'cheat)
-(vendor 'undo-tree)
-(vendor 'google-maps)
-(vendor 'enclose)
-(vendor 'feature-mode)
-
-
-; load third-party modes that the vendor function can't handle
-(add-to-list 'load-path "~/.emacs.d/vendor/js2")
-(add-to-list 'load-path "~/.emacs.d/vendor/rhtml")
-(add-to-list 'load-path "~/.emacs.d/vendor/yasnippet")
+;(vendor 'rinari)
+(vendor 'vimpulse)
+(vendor 'viper-in-more-modes)
 
 ; load personal customizations (keybindings, colors, etc.)
 (mapcar 'load-directory '("~/.emacs.d/customizations"))
-
- '(diff-added ((t (:foreground "#559944"))))
- '(diff-context ((t nil)))
- '(diff-file-header ((((class color) (min-colors 88) (background dark)) (:foreground "RoyalBlue1"))))
- '(diff-function ((t (:foreground "#00bbdd"))))
- '(diff-header ((((class color) (min-colors 88) (background dark)) (:foreground "RoyalBlue1"))))
- '(diff-hunk-header ((t (:foreground "#fbde2d"))))
- '(diff-nonexistent ((t (:inherit diff-file-header :strike-through nil))))
- '(diff-refine-change ((((class color) (min-colors 88) (background dark)) (:background "#182042"))))
- '(diff-removed ((t (:foreground "#de1923"))))
- '(flymake-errline ((t :underline "red")))
- '(flymake-warnline ((t :underline "green")))
-
-
