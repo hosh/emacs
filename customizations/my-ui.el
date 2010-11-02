@@ -3,4 +3,4 @@
 (setq color-theme-is-global t)
 (load-file "~/.emacs.d/themes/color-theme-vivid-chalk.el")
 (load-file "~/.emacs.d/themes/color-theme-subdued.el")
-(color-theme-subdued)
+(color-theme-vivid-chalk)
