@@ -7,3 +7,6 @@
 [submodule "vendor/vimpulse"]
 	path = vendor/vimpulse
 	url = git://gitorious.org/vimpulse/vimpulse.git
+[submodule "vendor/ruby-emacs"]
+	path = vendor/ruby-emacs
+	url = git://github.com/smtlaissezfaire/ruby-emacs.git

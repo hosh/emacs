@@ -40,5 +40,8 @@
 (vendor 'vimpulse)
 (vendor 'viper-in-more-modes)
 
+(add-to-list 'load-path "~/.emacs.d/vendor/ruby-emacs")
+(add-to-list 'load-path "~/.emacs.d/vendor/rails-reloaded")
+
 ; load personal customizations (keybindings, colors, etc.)
 (mapcar 'load-directory '("~/.emacs.d/customizations"))
