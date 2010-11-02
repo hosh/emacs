@@ -1,6 +1,6 @@
 (require 'color-theme)
 (color-theme-initialize)
 (setq color-theme-is-global t)
-(load-file "~/.emacs.d/vendor/twilight-emacs/color-theme-twilight.el")
-(color-theme-twilight)
-
+(load-file "~/.emacs.d/themes/color-theme-vivid-chalk.el")
+(load-file "~/.emacs.d/themes/color-theme-subdued.el")
+(color-theme-subdued)
