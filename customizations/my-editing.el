@@ -47,5 +47,9 @@
 ; apply syntax highlighting to all buffers
 (global-font-lock-mode t)
 
+; Autoindent in Ruby mode
+(add-hook 'ruby-mode-hook '(lambda ()
+  (local-set-key (kbd "RET") 'ruby-reindent-then-newline-and-indent)))
+;
 ; Startup with nav
 (nav)
