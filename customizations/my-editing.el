@@ -47,9 +47,18 @@
 ; apply syntax highlighting to all buffers
 (global-font-lock-mode t)
 
+; Visual feedback for entering in and out of insert mode
+(setq viper-insert-state-cursor-color "Red")
+
 ; Autoindent in Ruby mode
+(setq viper-auto-indent t)
+(setq viper-electric-mode t)
 (add-hook 'ruby-mode-hook '(lambda ()
-  (local-set-key (kbd "RET") 'ruby-reindent-then-newline-and-indent)))
+  (progn
+    (setq viper-auto-indent t)
+    (setq viper-electric-mode t)
+    (local-set-key (kbd "RET") 'ruby-reindent-then-newline-and-indent))))
+
 ;
 ; Startup with nav
 (nav)
