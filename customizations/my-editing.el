@@ -20,7 +20,7 @@
 
 ; line numbering
 (require 'linum)
-(global-linum-mode)
+;(global-linum-mode)
 (setq linum-format " %d ") ; space after line number
 
 ; show column number in bar
