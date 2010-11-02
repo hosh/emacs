@@ -10,3 +10,6 @@
 [submodule "vendor/ruby-emacs"]
 	path = vendor/ruby-emacs
 	url = git://github.com/smtlaissezfaire/ruby-emacs.git
+[submodule "vendor/twilight-emacs"]
+	path = vendor/twilight-emacs
+	url = git://github.com/crafterm/twilight-emacs.git
