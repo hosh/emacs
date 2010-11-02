@@ -3,5 +3,6 @@
 .emacs-opened-files
 .savehist
 .saveplace
+*.elc
 tramp
 vendor/nav/.hg/
