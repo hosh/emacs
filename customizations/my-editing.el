@@ -48,7 +48,8 @@
 (global-font-lock-mode t)
 
 ; Visual feedback for entering in and out of insert mode
-(setq viper-insert-state-cursor-color "Red")
+(add-hook 'viper-vi-state-hook '(lambda () (hl-line-mode t)))
+(add-hook 'viper-insert-state-hook '(lambda () (hl-line-mode nil)))
 
 ; Autoindent in Ruby mode
 (setq viper-auto-indent t)
