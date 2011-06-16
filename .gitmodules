@@ -16,3 +16,6 @@
 [submodule "vendor/rails"]
 	path = vendor/rails
 	url = git://github.com/remvee/emacs-rails.git
+[submodule "vendor/iswitch-menu"]
+	path = vendor/iswitch-menu
+	url = git://github.com/joodie/iswitch-menu.git

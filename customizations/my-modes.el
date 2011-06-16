@@ -9,7 +9,7 @@
 (setq auto-mode-alist (cons '("\\.rake" . ruby-mode) auto-mode-alist))
 
 ; Rails
-(require 'rails-autoload)
+;(require 'rails-autoload)
 
 ; Enclose
 ;(require 'enclose)

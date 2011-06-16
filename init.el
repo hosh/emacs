@@ -23,7 +23,7 @@
 (add-to-list 'load-path "~/.emacs.d/utilities")
 (add-to-list 'load-path "~/.emacs.d/vendor")
 (add-to-list 'load-path "~/.emacs.d/vendor/ruby-emacs")
-(add-to-list 'load-path "~/.emacs.d/vendor/rails-reloaded")
+;;(add-to-list 'load-path "~/.emacs.d/vendor/rails-reloaded")
 
 ; handy function to load all elisp files in a directory
 (load-file "~/.emacs.d/load-directory.el")
@@ -38,9 +38,11 @@
 ; load third-party modes
 ; note: these are configured in customizations/my-modes.el
 (vendor 'nav)
-;(vendor 'rinari)
 (vendor 'vimpulse)
 (vendor 'viper-in-more-modes)
+;;(vendor 'rails)
+;;(vendor 'iswitch-menu)
+(vendor 'rinari)
 
 ; load personal customizations (keybindings, colors, etc.)
 (mapcar 'load-directory '("~/.emacs.d/customizations"))
